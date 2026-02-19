@@ -6,6 +6,7 @@ local keymap = vim.keymap
 
 -- keymap.set(mode, new key, original key)
 -- Visual Mode --
+keymap.set("v", "<Space>", "<Nop>", { silent = true }) -- Clear Space default behavior for leader key to work
 -- Move line up and down
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")

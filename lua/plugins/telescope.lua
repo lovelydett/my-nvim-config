@@ -53,6 +53,13 @@ return {
     -- 操作方式：空格 + s + g (search grep)
     map("n", "<leader>sg", "<cmd>Telescope live_grep<CR>", { desc = "Search String in Project" })
 
+    -- 可视模式：搜索选中的文本
+    -- 操作方式：选中文本后按 空格 + s + g
+    map("v", "<leader>sg", function()
+      local text = vim.fn.getregion(vim.fn.getpos("v"), vim.fn.getpos("."))
+      require("telescope.builtin").grep_string({ search = table.concat(text, "\n") })
+    end, { desc = "Search Selected Text" })
+
     -- 搜索文件（按文件名）
     -- 使用场景：知道文件名，想快速打开
     -- 操作方式：空格 + s + f (search file)
