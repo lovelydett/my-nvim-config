@@ -58,8 +58,8 @@ return {
     
     -- 设置快捷键
     local map = vim.keymap.set
-    map("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
-    map("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
+    map("n", "]b", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+    map("n", "[b", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
     map("n", "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", { desc = "Pin Buffer" })
     map("n", "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", { desc = "Close Non-Pinned" })
     map("n", "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", { desc = "Close Others" })
