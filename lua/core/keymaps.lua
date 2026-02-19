@@ -9,6 +9,8 @@ local keymap = vim.keymap
 -- Move line up and down
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", ">", ">gv") -- 支持连续缩进
+keymap.set("v", "<", "<gv") -- 支持连续取消缩进
 
 -- Normal Mode --
 -- Windows
