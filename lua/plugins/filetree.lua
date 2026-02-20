@@ -22,6 +22,17 @@ return {
       source_selector = {
         winbar = true, -- 在顶部显示来源选择器 (files, git_status, buffers)
       },
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+        },
+      },
+      window = {
+        mappings = {
+          ["<BS>"] = "close_node",
+        },
+      },
     })
   end,
 }
